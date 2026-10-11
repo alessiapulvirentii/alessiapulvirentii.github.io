@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic website of Alessia Pulvirenti, PhD student in Economics at the Berlin School of Economics and Research Associate at DIW Berlin.">
+  <title>Alessia Pulvirenti | Economics</title>
+  <style>
+    :root {
+      --ink: #263540;
+      --muted: #65727b;
+      --link: #225c83;
+      --border: #e0e5e7;
+      --background: #fff;
+      --portrait: #edf2f4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--link); text-underline-offset: 3px; }
+    a:hover { color: #173e59; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 30px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; gap: 16px; border-bottom: 1px solid var(--border); }
+    .brand { font-size: 15px; font-weight: 650; letter-spacing: 0.01em; color: var(--ink); text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--link); }
+    main { padding: 64px 0 46px; }
+    .intro { display: grid; grid-template-columns: minmax(0, 1fr) 185px; gap: 54px; align-items: center; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(32px, 5vw, 42px); line-height: 1.18; font-weight: 650; letter-spacing: -0.035em; margin-bottom: 13px; }
+    .subtitle { font-size: 17px; color: var(--muted); margin-bottom: 20px; }
+    .intro p { max-width: 570px; }
+    .quicklinks { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 15px; margin-top: 22px; }
+    .portrait {
+      width: 185px; height: 220px; background: var(--portrait); border: 1px solid var(--border);
+      border-radius: 4px; display: flex; align-items: center; justify-content: center;
+      font-size: 48px; font-weight: 350; color: #899ba6; letter-spacing: 0.08em;
+      object-fit: cover;
+    }
+    .portrait-block { margin: 0; width: 185px; }
+    .portrait-image { position: relative; width: 185px; height: 220px; }
+    .portrait-photo { display: none; position: absolute; inset: 0; }
+    .has-photo .portrait-photo { display: block; }
+    .photo-credit { display: none; font-size: 11px; line-height: 1.4; color: var(--muted); margin-top: 7px; }
+    .has-photo .photo-credit { display: block; }
+    section { padding-top: 40px; margin-top: 35px; border-top: 1px solid var(--border); }
+    h2 { font-size: 21px; font-weight: 650; margin-bottom: 18px; letter-spacing: -0.015em; }
+    h3 { font-size: 17px; font-weight: 650; margin-bottom: 3px; line-height: 1.45; }
+    section p { max-width: 730px; margin-bottom: 12px; }
+    .item { margin-bottom: 24px; }
+    .note { color: var(--muted); font-size: 14px; margin: 4px 0 6px; }
+    footer { margin: 30px 0; border-top: 1px solid var(--border); padding-top: 23px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 610px) {
+      .wrap { padding: 0 22px; }
+      .topbar { align-items: flex-start; }
+      main { padding-top: 42px; }
+      .intro { grid-template-columns: 1fr; gap: 26px; }
+      .portrait-block { grid-row: 1; width: 150px; }
+      .portrait-image, .portrait { width: 150px; height: 180px; }
+      section { margin-top: 25px; padding-top: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    HOW TO FINISH THIS WEBSITE:
+    1. Upload your portrait as photo.jpg alongside index.html. Until then, the AP initials
+       will appear. The photo credit is shown only when photo.jpg loads.
+    2. Confirm that the photo's exact approved credit is DIW Berlin/Photothek
+       and that you may publish it on your personal website.
+    3. Replace you@university.edu in both places below with your academic email.
+    4. Upload your CV as cv.pdf alongside this file (or remove the CV link for now).
+    5. Replace the sample Research project titles and descriptions when ready.
+  -->
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="#top">Alessia Pulvirenti</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main id="top">
+      <div class="intro">
+        <div>
+          <h1>Alessia Pulvirenti</h1>
+          <p class="subtitle">PhD Student in Economics · Berlin School of Economics<br>Research Associate · DIW Berlin</p>
+          <p>I am a second-year PhD student in Economics at the Berlin School of Economics and a Research Associate at DIW Berlin in the Crime, Labour and Inequality Department.</p>
+          <div class="quicklinks">
+            <a href="mailto:you@university.edu">Email</a>
+            <a href="cv.pdf">CV (PDF)</a>
+            <a href="https://github.com/alessiapulvirenti">GitHub</a>
+          </div>
+        </div>
+        <figure class="portrait-block">
+          <div class="portrait-image">
+            <div class="portrait" aria-hidden="true">AP</div>
+            <img class="portrait portrait-photo" src="photo.jpg" alt="Portrait of Alessia Pulvirenti"
+                 onload="this.closest('figure').classList.add('has-photo')">
+          </div>
+          <figcaption class="photo-credit">© DIW Berlin/Photothek</figcaption>
+        </figure>
+      </div>
+      <section id="about">
+        <h2>About</h2>
+        <p>My research interests include Economics of Crime, Gender, and Labour Economics.</p>
+      </section>
+      <section id="research">
+        <h2>Research</h2>
+        <div class="item">
+          <h3>[Research project title]</h3>
+          <p class="note">Work in progress · [coauthors, if applicable]</p>
+          <p>[One sentence describing the research question or topic.]</p>
+        </div>
+        <div class="item">
+          <h3>[Another project, if applicable]</h3>
+          <p class="note">Work in progress</p>
+          <p>[Short description. You can remove this project until you have something to add.]</p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:you@university.edu">you@university.edu</a>.</p>
+      </section>
+    </main>
+    <footer>© 2026 Alessia Pulvirenti</footer>
+  </div>
+</body>
+</html>
